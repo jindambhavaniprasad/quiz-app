@@ -1,38 +1,410 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #cecece;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading {
+  font-size: 3rem;
+  color: rgb(39, 69, 107);
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.action-buttons {
+  color: green;
+  background-color: white;
+  border: 1px solid green;
+  width: 120px;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: cursive;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.action-buttons:hover {
+  color: white;
+  background-color: green;
+  border: 1px solid white;
+}
+
+.questions-number {
+  display: flex;
+  height: 320px;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.questions-numbers-div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.numbers-div {
+  width: 50px;
+  height: 50px;
+  margin: 10px
+}
+
+.numbers-btn {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid rgb(128, 226, 169);
+}
+
+.numbers-btn:hover {
+  background-color: rgb(63, 247, 78);
+}
+
+.numbers-selected {
+  background-color: rgb(63, 247, 78);
+}
+
+.a-question {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.question-h {
+  font-size: 1.2rem;
+  border: 2px solid #000000;
+  text-align: center;
+  font-family: monospace;
+  color: black;
+  border-radius: 25px;
+  background-color: inherit;
+  margin: 0 20px;
+}
+
+.question-h p {
+  margin: 15px 15px
+}
+
+.options-h {
+  margin: 20px;
+  height: 25px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.options-char {
+  height: 34px;
+  width: 30px;
+  background-color: rgb(124, 124, 255);
+  margin-left: -7px;
+  border-end-start-radius: 5px;
+  border-start-start-radius: 5px;
+}
+
+.options-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 35px;
+  width: 100%;
+  margin: 0 60px;
+  border: 1px solid rgb(105, 105, 252);
+  border-radius: 5px;
+  cursor: pointer
+}
+
+.options-char p {
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.options-optn {
+  margin: 0 0 0 25px
+}
+
+.options-btn:hover {
+  background-color: rgb(98, 98, 255);
+}
+
+.options-selected-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 35px;
+  width: 100%;
+  margin: 0 60px;
+  border: 1px solid rgb(105, 105, 252);
+  border-radius: 5px;
+  background-color: rgb(98, 98, 255);
+  cursor: pointer;
+}
+
+.submit-div {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.submit-btn {
+  background-color: #ffffff;
+  color: green;
+  height: 40px;
+  width: 110px;
+  margin-right: 50px;
+  padding: 0;
+  border: 1px solid green;
+  border-radius: 10px;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: green;
+  color: white;
+  border: 1px solid white;
+}
+
+.answered-q {
+  background-color: rgb(98, 98, 255);
+}
+
+.form-input {
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+.input-name {
+  margin: 30px 0;
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #00b8ff;
+  text-align: center;
+}
+
+.input-name:focus-visible {
+  outline: none;
+  border: 2px solid #00ff22;
+  box-shadow: 3px 5px 7px 1px rgb(0 0 0 / 37%);
+}
+
+.select-optn {
+  margin: 15px 0 40px 0;
+  width: 260px;
+  height: 45px;
+  border-radius: 10px;
+  text-align-last: center;
+  border: 1px solid #00b8ff;
+}
+
+.select-optn:focus-visible {
+  outline: none;
+  border: 2px solid #00ff22;
+  box-shadow: 3px 5px 7px 1px rgb(0 0 0 / 37%);
+}
+
+.scores-btn {
+  height: 50px;
+  width: 120px;
+  color: blue;
+  font-family: monospace;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid blue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scores-btn:hover {
+  color: white;
+  background-color: blue;
+  border: 1px solid white;
+}
+
+.animation-div {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgb(0 0 0 / 59%);
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content: center;
+}
+
+.adiv-1 {
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+  background-color: brown;
+  border-radius: 50%;
+  animation-name: anime;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.adiv-2 {
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+  background-color: red;
+  border-radius: 50%;
+  animation-name: anime;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.adiv-3 {
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+  background-color: green;
+  border-radius: 50%;
+  animation-name: anime;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.adiv-4 {
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+  background-color: yellow;
+  border-radius: 50%;
+  animation-name: anime;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes anime {
+  from {
+    transform: translateX(20px)
+  }
+  from {
+    transform: translateX(-20px)
+  }
+}
+
+.welcome-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  font-size: larger;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.thankyou-div {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  flex-direction: column;
+}
+
+.redirect-home-btn {
+  color: green;
+  background-color: white;
+  border: 1px solid green;
+  width: 120px;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: cursive;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.redirect-home-btn:hover {
+  color: white;
+  background-color: green;
+  border: 1px solid white;
+}
+
+.score-txt {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: larger;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.scores-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+bold {
+  font-weight: 700;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.scores-text {
+  font-weight: 700;
+  font-family: monospace;
+  font-size: 35px;
+}
+
+.score-div {
+  display: flex;
+  border: 1px solid darkgreen;
+  flex-direction: column;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin: 10px 5px;
+}
+
+.scores-header {
+  display: flex;
+  align-items: center;
+}
+.scores-header button{
+  width: 35px;
+  transform: rotate(90deg);
+  font-weight: 700;
+  text-align: center;
+  margin-right: 16px;
+  height: 35px;
+  background-color: white;
+  border: 1px solid green;
+  color: green;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.scores-header button:hover{
+  background-color: green;
+  border: 1px solid white;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.questions-parent{
+  display: flex;
+  flex-direction: column;
 }
